@@ -5,3 +5,17 @@ assert(len(X_train))==len(y_train)
 2
 print("training Set: {} samples".format(len(X_train)))
 3
+X_train = np.pad(X_train,((0,0),(2,2),(2,2),(0,0)),'constant')
+#http://blog.csdn.net/liyaohhh/article/details/51111115,no para to constant means put 0 in it
+print("shape is :{}".format(X_train[0].shape)
+4
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+#matplotlib inline
+index= random.randint(0,len(X_train))
+image = X_train[index].squeeze()
+
+plt.figure(figsize=(1,1))
+plt.imshow(image,cmap="gray")
+#
